@@ -21,33 +21,11 @@ namespace Planner
         private string owner;
 
         // //public properties
-        public int Stories
-        {
-            get{
-                return Stories;
-            }
-            set{
-                Stories = value;
-            }
-        }
-        public double Width
-         {
-            get{
-                return Width;
-            }
-            set{
-                Width = value;
-            }
-        }
-        public double Depth
-         {
-            get{
-                return Depth;
-            }
-            set{
-                Depth = value;
-            }
-        }
+        public int Stories{get; set;}
+
+        public double Width {get; set;}
+
+        public double Depth{get; set;}
         public double Volume
          {
             get{
@@ -69,5 +47,31 @@ namespace Planner
             owner = purchaser;
         }
 
+        public void Print(){
+            Console.WriteLine(
+                $@"
+     {address}
+ -------------------------
+Designed by {designer}
+Constructed on {dateConstructed}
+Owned by {owner}
+{Volume} cubic meters of space.");
+
+        }
+
+        //can use the method below and it will change the default console.writeline to what is given below
+
+ /*             public override string ToString () {
+            return $@"
+{address}
+-------------------------
+Designed by {designer}
+Constructed on {dateConstructed}
+Owned by {owner}
+{Volume} cubic meters of space.";
+        }
+        */
+
     }
+
 }
