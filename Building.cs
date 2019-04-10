@@ -15,10 +15,10 @@ namespace Planner
 {
     public class Building{
         //private properties
-        private string designer{get; set;}
-        private DateTime dateConstructed{get; set;}
-        private string address{get; set;}
-        private string owner{get; set;}
+        private string designer = "Antonio";
+        private DateTime dateConstructed;
+        private string address;
+        private string owner;
 
         // //public properties
         public int Stories
@@ -60,13 +60,13 @@ namespace Planner
             address = addressInput;
         }
         //public methods
-        DateTime currentTime()
+        public void Construct()
         {
             dateConstructed = DateTime.Now;
         }
-        string nameOfOwner(string ownerInput)
+        public void Purchase(string purchaser)
         {
-            owner = ownerInput;
+            owner = purchaser;
         }
 
     }
