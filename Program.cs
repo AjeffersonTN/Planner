@@ -19,6 +19,7 @@ namespace Planner
             FiveOneTwoEight.Print(); //have to invoke the Print method on the building in ordr to display in console
 
 
+
             Building EightOneZero = new Building("810 Detroit Avenue")
             {
                 Stories = 4,
@@ -42,6 +43,21 @@ namespace Planner
             // Console.WriteLine(NineThreeOne); this prints using the ToString Method
             NineThreeOne.Print(); //have to invoke the Print method on the building in ordr to display in console
 
+        //create a city
+        City flint = new City ("Flint", "Donald Duck", 1969);
+
+        //add buildings to city
+        flint.AddBuilding(NineThreeOne);
+        flint.AddBuilding(EightOneZero);
+        // flint.AddBuilding(FiveOneTwoEight);
+
+            flint.Print();
+
+            foreach (Building building in flint.Buildings)
+            {
+                building.Print();
+            }
         }
+
     }
 }
